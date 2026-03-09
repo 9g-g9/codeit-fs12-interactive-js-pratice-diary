@@ -131,7 +131,8 @@ button {
 }
 
 /* 빈 메시지 */
-#empty-message {
+#empty-message,
+.empty-message {
   text-align: center;
   color: #bbb;
   padding: 30px 0;

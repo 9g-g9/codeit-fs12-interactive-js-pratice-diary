@@ -39,9 +39,30 @@
         </form>
       </section>
 
+      <!-- 검색 -->
+      <section>
+        <input
+          type="text"
+          id="search-input"
+          placeholder="검색할 일기의 키워드를 입력해주세요."
+        />
+        <button id="search-btn">검색</button>
+      </section>
+
       <!-- 일기 목록 -->
       <section>
-        <h2>일기 목록</h2>
+        <h2 id="diary-title">일기 목록 (0)</h2>
+
+        <select id="mood-filter-select">
+          <option value="">선택</option>
+          <option value="happy">😊 행복</option>
+          <option value="sad">😢 슬픔</option>
+          <option value="angry">😠 화남</option>
+          <option value="excited">🎉 신남</option>
+          <option value="confused">🤔 혼란</option>
+          <option value="calm">😌 평온</option>
+        </select>
+
         <div id="diary-list"></div>
         <p id="empty-message">아직 작성된 일기가 없습니다.</p>
       </section>
