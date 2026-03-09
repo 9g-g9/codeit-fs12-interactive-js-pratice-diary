@@ -508,6 +508,8 @@ searchBtn.addEventListener("click", function () {
 moodFilterSelect.addEventListener("change", function () {
   filtering = moodFilterSelect.options[moodFilterSelect.selectedIndex].value;
 
+  searchInput.value = "";
+
   renderAllEntries(filtering);
 });
 
