@@ -300,11 +300,11 @@ function deleteEntry(id) {
 
   const deleteId = diary.findIndex((list) => list.id === id);
 
-  deleteId !== -1
-    ? diary.splice(diary[deleteId])
-    : alert("삭제할 수 있는 일기가 존재하지 않습니다!");
-
+  deleteId !== -1 && editingId === null
+    ? diary.splice(deleteId, 1)
+    : alert("삭제할 수 있는 일기가 존재하지 않거나 수정중입니다!");
   renderAllEntries(filtering);
+  renderStats();
 }
 
 // ============================================
